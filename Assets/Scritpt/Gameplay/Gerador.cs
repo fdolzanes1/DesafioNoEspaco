@@ -4,6 +4,8 @@ using UnityEngine;
 public class Gerador : MonoBehaviour
 {
     [SerializeField]
+    private Transform alvo;
+    [SerializeField]
     private GameObject prefabInimigo;
     [SerializeField]
     private float tempo;
@@ -28,6 +30,8 @@ public class Gerador : MonoBehaviour
     {
         var inimigo = GameObject.Instantiate(this.prefabInimigo);
         this.DefinirPosicaoInimigo(inimigo);
+        //inimigo vai seguir a posicao do alvo (jogador)
+        inimigo.GetComponent<Seguir>().SetAlvo(this.alvo);
     }
 
     private void DefinirPosicaoInimigo(GameObject inimigo)

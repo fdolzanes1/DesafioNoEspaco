@@ -6,11 +6,19 @@ public class Seguir : MonoBehaviour
 {
     [SerializeField]
     private Transform alvo;
+    [SerializeField]
+    private float velocidade;
 
-    void Update()
+    private void Update()
     {
         var deslocamento = alvo.position - this.transform.position;
         deslocamento = deslocamento.normalized;
+        deslocamento *= this.velocidade;
         this.transform.position += deslocamento * Time.deltaTime;
+    }
+
+    public void SetAlvo(Transform novoAlvo)
+    {
+        this.alvo = novoAlvo;
     }
 }

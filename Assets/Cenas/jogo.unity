@@ -176,6 +176,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86988fea7ef88fe40b0e69ccdd3cca88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &139149049 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4753466492845412, guid: 867da2ed13811b347a09b4756abcd004,
+    type: 3}
+  m_PrefabInstance: {fileID: 139149042}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &457752700
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -272,6 +278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b519f48fe722b84ba48fc724ec8d27e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  alvo: {fileID: 139149049}
   prefabInimigo: {fileID: 1134229065056836, guid: 83f2d8f359aa4004f9a935c6a860ce11,
     type: 3}
   tempo: 1
@@ -757,6 +764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b519f48fe722b84ba48fc724ec8d27e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  alvo: {fileID: 139149049}
   prefabInimigo: {fileID: 1134229065056836, guid: 83f2d8f359aa4004f9a935c6a860ce11,
     type: 3}
   tempo: 1
@@ -1361,6 +1369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b519f48fe722b84ba48fc724ec8d27e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  alvo: {fileID: 139149049}
   prefabInimigo: {fileID: 1134229065056836, guid: 83f2d8f359aa4004f9a935c6a860ce11,
     type: 3}
   tempo: 1

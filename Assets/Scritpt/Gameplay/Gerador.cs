@@ -14,10 +14,12 @@ public class Gerador : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(this.IniciarGeracao());
+        //StartCoroutine(this.IniciarGeracao());
+        InvokeRepeating("Instanciar", 0f, this.tempo);
     }
 
-    private IEnumerator IniciarGeracao()
+    /**
+     * private IEnumerator IniciarGeracao()
     {
         while (true)
         {
@@ -25,6 +27,7 @@ public class Gerador : MonoBehaviour
             this.Instanciar();
         }
     }
+    */
 
     private void Instanciar()
     {

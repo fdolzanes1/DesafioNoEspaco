@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Pontuavel : MonoBehaviour
 {
-
     private Pontuacao pontuacao;
 
     public void Pontuar()

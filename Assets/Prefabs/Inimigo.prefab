@@ -171,4 +171,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alvo: {fileID: 0}
-  velocidade: 3
+  forca: 3

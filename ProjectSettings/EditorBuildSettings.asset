@@ -14,3 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Cenas/Ranking.unity
     guid: 93f4f157a426ac9468e7e4d724ac938a
+  - enabled: 1
+    path: Assets/Cenas/Sobre.unity
+    guid: 5150a7d3d3d4200499b97a8c9b7f9151
+  m_configObjects: {}

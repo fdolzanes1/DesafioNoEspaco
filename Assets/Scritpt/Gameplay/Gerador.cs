@@ -6,6 +6,8 @@ public class Gerador : MonoBehaviour
     [SerializeField]
     private Transform alvo;
     [SerializeField]
+    private Pontuacao pontuacao;
+    [SerializeField]
     private GameObject prefabInimigo;
     [SerializeField]
     private float tempo;
@@ -35,6 +37,7 @@ public class Gerador : MonoBehaviour
         this.DefinirPosicaoInimigo(inimigo);
         //inimigo vai seguir a posicao do alvo (jogador)
         inimigo.GetComponent<Seguir>().SetAlvo(this.alvo);
+        inimigo.GetComponent<Pontuavel>().SetPontuacao(this.pontuacao);
     }
 
     private void DefinirPosicaoInimigo(GameObject inimigo)

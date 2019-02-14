@@ -368,6 +368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05cb114110d3c15449d2f502e3a96509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  texto: {fileID: 0}
 --- !u!222 &679329956
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -918,6 +919,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1331123930}
   - component: {fileID: 1331123931}
+  - component: {fileID: 1331123932}
   m_Layer: 0
   m_Name: Pontuacao
   m_TagString: Untagged
@@ -967,6 +969,18 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: MeuEventoPersonalizadoInt, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+--- !u!114 &1331123932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331123929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba9b0f10128242a48bcd4b19431a3ebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1344085548
 GameObject:
   m_ObjectHideFlags: 0

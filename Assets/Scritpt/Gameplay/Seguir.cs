@@ -17,6 +17,7 @@ public class Seguir : MonoBehaviour
 
     private void FixedUpdate()
     {
+        
         var deslocamento = alvo.position - this.transform.position;
         deslocamento = deslocamento.normalized;
         deslocamento *= this.forca;

@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class TextoDinamico : MonoBehaviour
 {
-    private Text texto;
+    public Text texto;
 
-    private void Awake()
+    public void Awake()
     {
         this.texto = this.GetComponent<Text>();
     }

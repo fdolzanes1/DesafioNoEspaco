@@ -21,5 +21,6 @@ public class NovaPontuacao : MonoBehaviour
         }
         this.textoPontuacao.AtualizarTexto(totalDePontos);
         this.ranking.AdicionarPontuacao(totalDePontos);
+        
     }
 }

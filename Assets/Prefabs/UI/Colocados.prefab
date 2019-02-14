@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 1177682416698881474}
   - component: {fileID: 1177682416698881476}
   - component: {fileID: 1177682416698881475}
+  - component: {fileID: 79732285908494254}
   m_Layer: 5
   m_Name: Colocados
   m_TagString: Untagged
@@ -156,6 +157,21 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &79732285908494254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177682416698881473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f145078502aca84c9a69f6168ef2fb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textoColocado: {fileID: 1177682416620615069}
+  textoNome: {fileID: 1177682417488384590}
+  textoPontuacao: {fileID: 1177682416752804498}
 --- !u!1 &1177682416752804496
 GameObject:
   m_ObjectHideFlags: 0

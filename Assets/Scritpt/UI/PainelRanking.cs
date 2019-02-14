@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PainelRanking : MonoBehaviour
 {
@@ -15,7 +16,14 @@ public class PainelRanking : MonoBehaviour
         
         for ( var i=0; i<quantidade; i++ )
         {
-            GameObject.Instantiate(this.prefabColocacao, this.transform);
+            if ( i >= 5)
+            {
+                break;
+            }
+
+            var colocado = GameObject.Instantiate(this.prefabColocacao, this.transform);
+            colocado.GetComponent<ItemRanking>().Configurar(i, "Ricardo", 929);
+                
         }
     }
 }

@@ -1,7 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using System.Collections.ObjectModel;
+
 
 public class Ranking : MonoBehaviour
 {
@@ -27,6 +28,11 @@ public class Ranking : MonoBehaviour
     public int Quantidade()
     {
         return this.pontos.Count;
+    }
+
+    public ReadOnlyCollection<int> GetPontos()
+    {
+        return this.pontos.AsReadOnly();
     }
 
     public void SalvarRanking()

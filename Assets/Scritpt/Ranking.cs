@@ -26,10 +26,25 @@ public class Ranking : MonoBehaviour
         }
     }
 
-    public void AdicionarPontuacao(int pontos, string nome)
+    public int AdicionarPontuacao(int pontos, string nome)
     {
-        var novoColocado = new Colocado(nome, pontos);
+        var id = this.listaDeColocados.Count * Random.Range(1, 100000);
+        var novoColocado = new Colocado(nome, pontos, id);
         this.listaDeColocados.Add(novoColocado);
+        this.SalvarRanking();
+        return id;
+    }
+
+    public void AlterarNome(string nomeNovo, int id) 
+    {
+        foreach(var item in this.listaDeColocados ) 
+        {
+            if (item.id == id)
+            {
+                item.nome = nomeNovo;
+                break;
+            }
+        }
         this.SalvarRanking();
     }
 
@@ -57,12 +72,13 @@ public class Ranking : MonoBehaviour
 public class Colocado
 {
     public string nome;
-    public int pontos; 
+    public int pontos;
+    public int id;
 
-
-    public Colocado (string nome, int pontos)
+    public Colocado (string nome, int pontos, int id )
     {
         this.nome = nome;
         this.pontos = pontos;
+        this.id = id;
     }
 }

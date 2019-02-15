@@ -43,6 +43,7 @@ public class Ranking : MonoBehaviour
         return this.listaDeColocados.AsReadOnly();
     }
 
+    // salvando informacoes do ranking no json
     public void SalvarRanking()
     {
         var textoJson = JsonUtility.ToJson(this);
@@ -57,6 +58,7 @@ public class Colocado
 {
     public string nome;
     public int pontos; 
+
 
     public Colocado (string nome, int pontos)
     {

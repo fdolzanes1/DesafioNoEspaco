@@ -8,31 +8,39 @@ public class Ranking : MonoBehaviour
 {
     private static string NOME_DO_ARQUIVO = "Ranking.json";
     [SerializeField]
-    private List<int> pontos;
+    private List<Colocado> listaDeColocados;
     private string caminhoParaOArquivo;
 
     private void Awake()
     {
         this.caminhoParaOArquivo = Path.Combine(Application.persistentDataPath, NOME_DO_ARQUIVO);
-        var textoJSON = File.ReadAllText(this.caminhoParaOArquivo);
-        JsonUtility.FromJsonOverwrite(textoJSON, this);
 
+        if (File.Exists(this.caminhoParaOArquivo))
+        {
+            var textoJSON = File.ReadAllText(this.caminhoParaOArquivo);
+            JsonUtility.FromJsonOverwrite(textoJSON, this);
+        }
+        else
+        {
+            this.listaDeColocados = new List<Colocado>();
+        }
     }
 
-    public void AdicionarPontuacao(int pontos)
+    public void AdicionarPontuacao(int pontos, string nome)
     {
-        this.pontos.Add(pontos);
+        var novoColocado = new Colocado(nome, pontos);
+        this.listaDeColocados.Add(novoColocado);
         this.SalvarRanking();
     }
 
     public int Quantidade()
     {
-        return this.pontos.Count;
+        return this.listaDeColocados.Count;
     }
 
-    public ReadOnlyCollection<int> GetPontos()
+    public ReadOnlyCollection<Colocado> GetPontos()
     {
-        return this.pontos.AsReadOnly();
+        return this.listaDeColocados.AsReadOnly();
     }
 
     public void SalvarRanking()
@@ -40,6 +48,19 @@ public class Ranking : MonoBehaviour
         var textoJson = JsonUtility.ToJson(this);
 
         File.WriteAllText(this.caminhoParaOArquivo, textoJson);
-        Debug.Log(Application.persistentDataPath);
+        //Debug.Log(Application.persistentDataPath);
+    }
+}
+
+[System.Serializable]
+public class Colocado
+{
+    public string nome;
+    public int pontos; 
+
+    public Colocado (string nome, int pontos)
+    {
+        this.nome = nome;
+        this.pontos = pontos;
     }
 }

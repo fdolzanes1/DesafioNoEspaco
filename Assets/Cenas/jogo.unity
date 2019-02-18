@@ -920,9 +920,10 @@ GameObject:
   - component: {fileID: 1331123930}
   - component: {fileID: 1331123931}
   - component: {fileID: 1331123932}
+  - component: {fileID: 1331123933}
   m_Layer: 0
   m_Name: Pontuacao
-  m_TagString: Untagged
+  m_TagString: "Pontua\xE7\xE3o"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -979,6 +980,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba9b0f10128242a48bcd4b19431a3ebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1331123933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331123929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e47073aa750db4287dd7cab9ea87de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1344085548

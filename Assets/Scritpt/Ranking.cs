@@ -2,7 +2,7 @@
 using UnityEngine;
 using System.IO;
 using System.Collections.ObjectModel;
-
+using System;
 
 public class Ranking : MonoBehaviour
 {
@@ -28,9 +28,10 @@ public class Ranking : MonoBehaviour
 
     public int AdicionarPontuacao(int pontos, string nome)
     {
-        var id = this.listaDeColocados.Count * Random.Range(1, 100000);
+        var id = this.listaDeColocados.Count * UnityEngine.Random.Range(1, 100000);
         var novoColocado = new Colocado(nome, pontos, id);
         this.listaDeColocados.Add(novoColocado);
+        this.listaDeColocados.Sort();
         this.SalvarRanking();
         return id;
     }
@@ -69,7 +70,7 @@ public class Ranking : MonoBehaviour
 }
 
 [System.Serializable]
-public class Colocado
+public class Colocado: IComparable
 {
     public string nome;
     public int pontos;
@@ -80,5 +81,13 @@ public class Colocado
         this.nome = nome;
         this.pontos = pontos;
         this.id = id;
+    }
+
+    public int CompareTo(object obj)
+    {
+        var outroObjeto = obj as Colocado;
+        return outroObjeto.pontos.CompareTo(this.pontos);
+        //return this.pontos.CompareTo(outroObjeto.pontos);
+        //throw new NotImplementedException();
     }
 }
